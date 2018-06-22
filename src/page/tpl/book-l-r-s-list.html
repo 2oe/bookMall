@@ -1,0 +1,19 @@
+<script id="search-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <li>
+        <a href="#">
+            <div class="book-cover">
+                <img src="../../imgs/default-img.jpg" data-original="{{cover}}">
+            </div>
+            <div class="book-info">
+                <p class="title">{{title}}</p>
+                <p class="summary">{{intro}}</p>
+                <div class="book-btm">
+                    <p class="author">{{role}}</p>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+
+</script>

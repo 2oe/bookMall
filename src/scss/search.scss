@@ -1,0 +1,55 @@
+@import "tpl/common.scss";
+@import "tpl/_type-tags.scss";
+.inner-content {
+    width: 100%;
+    height: 100%;
+}
+
+.search-list {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    li:nth-child(1) {
+        a {
+            padding: 0 pxTorem(15px) pxTorem(15px) pxTorem(15px);
+        }
+    }
+    a {
+        display: flex;
+        padding: pxTorem(15px);
+        border-bottom: pxTorem(1px) solid $search-border;
+        .book-cover {
+            width: pxTorem(100px);
+            height: pxTorem(140px);
+            img {
+                @include wh;
+            }
+            background-color: $book-bg;
+            box-shadow: 0px pxTorem(6px) pxTorem(5px) pxTorem(-3px) $book-shadow-color;
+            border: pxTorem(1px) solid $book-border-color;
+            border-bottom: none;
+        }
+        .book-info {
+            flex: 1;
+            margin-left: pxTorem(10px);
+            .title {
+                font-size: pxTorem(16px);
+                color: $black-color;
+                margin: pxTorem(6px) 0;
+            }
+            .author,
+            .newest {
+                font-size: pxTorem(14px);
+                color: $gray-color;
+                line-height: 2;
+            }
+            .summary {
+                font-size: pxTorem(14px);
+                color: $gray-color;
+                margin-bottom: pxTorem(6px);
+                @include line(2)
+            }
+        }
+    }
+}

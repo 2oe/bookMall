@@ -1,0 +1,24 @@
+<script type="text/x-handlebars-template" id="l-r-tpl">
+    {{#each this}}
+    <li>
+        <a href="#">
+            <div class="book-cover">
+                <img src="{{cover}}"> {{#if isShowNum}}
+                <i class="order">{{addInd @index}}</i> {{/if}}
+
+                <span class="book-status">{{#if finish}}完结{{else}}连载{{/if}}</span>
+            </div>
+            <div class="book-info">
+                <h2 class="title">{{title}}</h2>
+                <span class="author">{{authors}}</span>
+                <span class="intro">{{summary}}</span>
+                <ol class="tag-list">
+                    {{#each tags}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>

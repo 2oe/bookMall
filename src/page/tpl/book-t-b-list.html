@@ -1,0 +1,12 @@
+<script type="text/x-handlebars-template" id="t-b-tpl">
+    {{#each data}}
+    <li>
+        <a href="page/book-detail.html?fiction_id={{fiction_id}}">
+            <div class="book-cover">
+                <img src="{{cover}}">
+            </div>
+            <span class="title">{{title}}</span>
+        </a>
+    </li>
+    {{/each}}
+</script>

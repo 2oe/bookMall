@@ -1,0 +1,23 @@
+@import "../_mixin.scss";
+@import "../_config.scss";
+.type-tags {
+    margin: pxTorem(15px);
+    .tag {
+        display: inline-block;
+        line-height: 1.8;
+        padding: 0 pxTorem(20px);
+        color: $tag-color;
+        border-radius: pxTorem(4px);
+        background-color: $tag-bg3;
+        font-size: pxTorem(12px);
+        text-align: center;
+        border: 1px solid $border-color;
+        margin: 0 pxTorem(4px) pxTorem(10px) 0;
+        &:nth-child(3n+2) {
+            background-color: $tag-bg2;
+        }
+        &:nth-child(3n+1) {
+            background-color: $tag-bg1;
+        }
+    }
+}
