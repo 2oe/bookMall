@@ -10,6 +10,29 @@ require(['jquery', 'swiper', 'bscroll', 'direction', 'render', 'text!bookTB','te
         url: '/api/home',
         dataType: 'json',
         success: function(res) {
+            console.log(res.items[0].data.data)
+            // 轮播图
+            var bannerArr = [];
+            res.items[0].data.data.forEach(function(item) {
+                if (item.size !== 0) {
+                    bannerArr.push(item);
+                }
+            });
+            render("#banner_tpl", ".bWrap", bannerArr);
+            var bannerSwiper = new swiper('.banner',{
+                autoplay: 1000,
+                loop:true
+            })
+            
+            //分类
+            var typeArr = [];
+            res.items[0].data.data.forEach(function(item) {
+                if (item.size === 0) {
+                    typeArr.push(item);
+                }
+            });
+            console.log(typeArr)
+            render("#type-tpl", ".types", typeArr);
 
             // 本周最火
             render("#book-t-b", ".top-list", res.items[1].data);

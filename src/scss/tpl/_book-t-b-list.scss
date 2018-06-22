@@ -1,0 +1,20 @@
+.top-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        width: 33.3%;
+        dl {
+            width: pxTorem(88px);
+            margin: pxTorem(10px) auto;
+            dt {
+                width: 100%;
+                height: pxTorem(120px);
+                overflow: hidden;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -262,6 +262,19 @@ body {
       position: absolute;
       left: 0;
       top: 0; }
+    .wrap header .icon-home {
+      width: 1.17333rem;
+      height: 1.17333rem;
+      background: url("../imgs/icon-home.png") no-repeat center center;
+      background-size: 0.48rem;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .wrap header .title {
+      color: #333;
+      font-size: 0.37333rem;
+      padding-left: 1.17333rem;
+      line-height: 1.17333rem; }
     .wrap header .search-wrap {
       margin: 0.13333rem 0.53333rem 0 1.17333rem;
       height: 0.90667rem;
@@ -461,14 +474,22 @@ body {
 .types {
   width: 100%;
   display: flex;
-  text-align: center;
-  margin-bottom: 0.26667rem; }
+  padding: 0.13333rem 0;
+  text-align: center; }
   .types dl {
     flex: 1; }
     .types dl dt {
-      width: 1.06667rem;
-      height: 1.06667rem;
+      width: 0.93333rem;
+      height: 0.93333rem;
       margin: 0 auto; }
       .types dl dt img {
         width: 100%;
         height: 100%; }
+    .types dl dd {
+      margin-top: 0.13333rem; }
+
+.banner, .bWrap, .bSlide {
+  width: 100%;
+  height: 100%; }
+  .banner img, .bWrap img, .bSlide img {
+    width: 100%; }

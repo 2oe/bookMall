@@ -1,0 +1,118 @@
+@import './tpl/_type-tags.scss';
+@import './tpl/_book-t-b-list.scss';
+@import './tpl/common.scss';
+.inner-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scroll: touch;
+}
+
+.book-detail-con {
+    width: 100%;
+    padding: pxTorem(15px);
+    display: flex;
+    @include sizing;
+    dt {
+        width: pxTorem(100px);
+        height: pxTorem(130px);
+        margin-right: pxTorem(15px);
+        background-color: $book-bg;
+        box-shadow: 0px pxTorem(6px) pxTorem(5px) pxTorem(-3px) $book-shadow-color;
+        border: pxTorem(1px) solid $book-border-color;
+        border-bottom: none;
+        img {
+            @include wh;
+        }
+    }
+    dd {
+        .title {
+            font-size: pxTorem(16px);
+        }
+        .author {
+            font-size: pxTorem(12px);
+            margin-top: pxTorem(20px);
+            color: $green-color;
+        }
+        .price,
+        .count {
+            font-size: pxTorem(12px);
+            color: $gray-color;
+            line-height: 2
+        }
+        .booktag {
+            border: 1px solid $blue-color;
+            color: $blue-color;
+            border-radius: pxTorem(4px);
+            font-size: pxTorem(12px);
+            line-height: pxTorem(16px);
+            display: inline-block;
+            padding: 0 pxTorem(2px);
+            margin-left: pxTorem(10px);
+        }
+    }
+}
+
+.btn-group {
+    display: flex;
+    padding: 0 pxTorem(15px);
+    .btn {
+        flex: 1;
+        height: pxTorem(40px);
+        line-height: pxTorem(40px);
+        font-size: pxTorem(14px);
+        color: $gray-color;
+        background-color: $write-color;
+        border: 1px solid $border-color;
+        text-align: center;
+        border-radius: pxTorem(4px);
+        outline: none;
+        &:active {
+            background-color: $border-color;
+        }
+        &.orange-btn {
+            border: 1px solid $btn-orange-border;
+            background-color: $btn-orange-bg;
+            color: $write-color;
+        }
+        &:nth-child(1) {
+            margin-right: 2%;
+        }
+    }
+}
+
+.brief {
+    font-size: pxTorem(12px);
+    color: $gray-color;
+    line-height: 1.5;
+    margin: pxTorem(15px);
+    @include line(5);
+}
+
+.group-footer {
+    display: flex;
+    text-align: center;
+    font-size: pxTorem(12px);
+    border-top: 1px solid $border-color;
+    a {
+        padding: pxTorem(15px) 0;
+        flex: 1;
+        text-align: center;
+        color: $gray-color;
+    }
+}
+
+.type-title {
+    font-size: pxTorem(16px);
+    color: $gray-color;
+    font-weight: bold;
+    margin: pxTorem(15px) 0 0 pxTorem(15px);
+}
+
+.copyright {
+    font-size: pxTorem(14px);
+    color: $gray-color;
+    line-height: 2;
+    padding: pxTorem(15px);
+    background-color: $write-color;
+}

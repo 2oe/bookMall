@@ -251,6 +251,21 @@ body {
             left: 0;
             top: 0;
         }
+        .icon-home {
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            @include bg("../imgs/icon-home.png");
+            background-size: pxTorem(18px);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .title {
+            color: $black-color;
+            font-size: pxTorem(14px);
+            padding-left: pxTorem(44px);
+            line-height: pxTorem(44px);
+        }
         .search-wrap {
             margin: pxTorem(5px) pxTorem(20px) 0 pxTorem(44px);
             height: pxTorem(34px);

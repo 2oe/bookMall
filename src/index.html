@@ -33,6 +33,18 @@
                                         <a class="not-ipt" href="./page/search.html">请输入书名，作者，关键字</a>
                                     </div>
                                     <!-- 轮播图注意加swiper-no-swiping -->
+                                    <div class="swiper-container banner swiper-no-swiping">
+                                        <div class="swiper-wrapper bWrap">
+                                            
+                                        </div>
+                                    </div>
+                                    <script type="text/x-handlebars-template" id="banner_tpl">
+                                        {{#each this}}
+                                            <div class="swiper-slide bSlide">
+                                                <img src="{{ad_pic_url}}">
+                                            </div>
+                                        {{/each}}
+                                    </script>
                                     <div class="types">
 
                                     </div>
