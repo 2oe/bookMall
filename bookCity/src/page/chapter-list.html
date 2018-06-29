@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>书城</title>
+    <link rel="stylesheet" href="../css/chapter-list.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span class="icon-back"></span>
+            <div class="title">目录</div>
+            <span class="icon-home"></span>
+        </header>
+        <div class="chapter-wrap">
+            <ul class="chapter-list"></ul>
+        </div>
+        <script id="chapter-template" type="text/x-handlebars-template">
+            {{#each this}}
+            <li>{{title}} <span>{{#if already}}已读{{else}}未读{{/if}}</span></li>
+            {{/each}}
+        </script>
+    </div>
+</body>
+<script src="../js/libs/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['chapterList'])
+    })
+</script>
+
+</html>

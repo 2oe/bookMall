@@ -1,0 +1,19 @@
+@import "./tpl/common.scss";
+.form {
+    input {
+        width: 80%;
+        display: block;
+        margin: pxTorem(10px) auto;
+        height: pxTorem(44px);
+        border: 1px solid gray;
+    }
+    button {
+        width: 60%;
+        height: pxTorem(44px);
+        display: block;
+        margin: 0 auto;
+        background-color: orange;
+        color: $write-color;
+        font-size: pxTorem(14px);
+    }
+}

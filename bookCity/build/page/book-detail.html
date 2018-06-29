@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/libs/flexible.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>书城</title>
+    <link rel="stylesheet" href="../css/book-detail.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="render-header"></header>
+        <div class="content none">
+            <div class="inner-content" id="detail-wrap">
+                <section class="block" id="detail"></section>
+                <script id="detail-template" type="text/x-handlebars-template">
+                    <dl class="book-detail-con">
+                        <dt>
+                            <img src="{{cover}}">
+                        </dt>
+                        <dd>
+                            <h3 class="title">{{title}}</h3>
+                            <p class="author">{{authors}}</p>
+                            <div class="u-grade">
+                                <div class="grade grade8"></div>
+                                <span class="read">{{score_count}}个评价</span>
+                            </div>
+                            <p class="price">价格：{{price}}书币/千字</p>
+                            <p class="count">字数：{{word_count}}字<span class="booktag green-booktag">{{#if finish}}完结{{else}}连载中{{/if}}</span></p>
+                        </dd>
+                    </dl>
+                    <div class="btn-group">
+                        <button class="btn orange-btn" id="start-btn">开始阅读</button>
+                        <button class="btn">下载</button>
+                    </div>
+                    <p class="brief">
+                        {{content}}
+                    </p>
+                    <div class="group-footer">
+                        <a href="chapter-list.html?fiction_id={{fiction_id}}">最新：{{latest}}</a>
+                    </div>
+                </script>
+                <section class="block">
+                    <h3 class="type-title">类别标签</h3>
+                    <ul class="type-tags"></ul>
+                    <script id="tag-template" type="text/x-handlebars-template">
+                        {{#each tags}}
+                        <li class="tag">{{this}}</li>
+                        {{/each}}
+                    </script>
+                </section>
+                <section class="block">
+                    <ul class="book-t-b-list" id="other-list"></ul>
+                </section>
+                <section class="copyright"></section>
+                <script id="copyright-template" type="text/x-handlebars-template">
+                    <p>图书信息</p>
+                    <p>版权：{{rights}}</p>
+                </script>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/libs/require.js"></script>
+<script>
+    require(['../js/main.js'], function() {
+        require(['bookDetail'])
+    })
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/libs/flexible.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span class="icon-back"></span>
+            <div class="title">女生</div>
+            <span class="icon-home"></span>
+        </header>
+        <div class="list-content">
+            <div class="list-wrap"></div>
+        </div>
+        <script type="text/x-handlebars-template" id="list-tpl">
+            {{#each this}}
+            <section class="block">
+                <h2 class="title-line">{{ad_name}}</h2>
+                <ul class="search-list">
+                    {{#each data.data}}
+                    <li>
+                        <a href="#">
+                            <div class="book-cover">
+                                <img src="../../imgs/default-img.jpg" data-original="{{cover}}">
+                            </div>
+                            <div class="book-info">
+                                <p class="title">{{title}}</p>
+                                <p class="summary">{{intro}}</p>
+                                <div class="book-btm">
+                                    <p class="author">{{role}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </section>
+            {{/each}}
+        </script>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['list'])
+        })
+    </script>
+</body>
+
+</html>

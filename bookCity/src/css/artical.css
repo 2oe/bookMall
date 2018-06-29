@@ -1,0 +1,457 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-family: STHeitiSC-Light;
+  font: inherit;
+  vertical-align: baseline; }
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  font-family: arial, sans-serif; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+ins,
+a {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  display: inline-block; }
+
+input,
+textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none; }
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/*字体大小*/
+/*灰色字体颜色*/
+/*白色字体*/
+/*黑色字体*/
+/*按钮灰色边框*/
+/*蓝色边框颜色*/
+/*蓝色字体颜色*/
+/*group 底部边框颜色*/
+/*header背景*/
+/*搜索框border颜色*/
+/*banner buttle*/
+/*orange line颜色*/
+/*line bottom颜色*/
+/* 书背景*/
+/* 书边框颜色 */
+/*书的阴影*/
+/*绿色标签颜色*/
+/*限免tag背景*/
+/*按钮背景颜色*/
+/*按钮border颜色*/
+/*标签背景*/
+/*标签背景色*/
+/*详情界面*/
+/* 阅读界面 */
+/*阅读界面标题*/
+/*超过几行显示省略号*/
+/*背景*/
+/* 滚动 */
+/*html {
+    font-size: $browser-default-font-size;
+}*/
+html {
+  font-size: 37.5px; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .wrap header {
+    width: 100%;
+    height: 1.17333rem;
+    background-color: #efeff0;
+    border-bottom: 1px solid #777;
+    position: relative; }
+    .wrap header .icon-sign {
+      width: 1.17333rem;
+      height: 1.17333rem;
+      background: url("../../imgs/icon-sign.png") no-repeat center center;
+      background-size: 0.48rem;
+      position: absolute;
+      left: 0;
+      top: 0; }
+    .wrap header .icon-my {
+      width: 1.17333rem;
+      height: 1.17333rem;
+      background: url("../../imgs/icon-person.png") no-repeat center center;
+      background-size: 0.48rem;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .wrap header .tab {
+      width: 3.2rem;
+      height: 1.17333rem;
+      margin: 0 auto;
+      display: flex;
+      position: relative; }
+      .wrap header .tab .tab-item {
+        flex: 1;
+        text-align: center;
+        line-height: 1.17333rem; }
+        .wrap header .tab .tab-item.active {
+          color: #ff6600; }
+      .wrap header .tab .line {
+        width: 1.6rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .5s; }
+        .wrap header .tab .line:before {
+          content: '';
+          width: 50%;
+          height: 2px;
+          margin: 0 auto;
+          display: block;
+          background-color: #ff6600; }
+        .wrap header .tab .line.move {
+          -webkit-transform: translateX(1.6rem);
+                  transform: translateX(1.6rem); }
+    .wrap header .icon-back {
+      width: 1.17333rem;
+      height: 1.17333rem;
+      background: url("../imgs/icon-back.png") no-repeat center center;
+      background-size: 0.58667rem;
+      position: absolute;
+      left: 0;
+      top: 0; }
+    .wrap header .icon-home {
+      width: 1.17333rem;
+      height: 1.17333rem;
+      background: url("../imgs/icon-home.png") no-repeat center center;
+      background-size: 0.48rem;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .wrap header .title {
+      color: #333;
+      font-size: 0.37333rem;
+      padding-left: 1.17333rem;
+      line-height: 1.17333rem; }
+    .wrap header .search-wrap {
+      margin: 0.13333rem 0.53333rem 0 1.17333rem;
+      height: 0.90667rem;
+      display: flex;
+      background-color: #fff; }
+      .wrap header .search-wrap .icon-search {
+        width: 0.90667rem;
+        height: 0.90667rem;
+        background: url("../imgs/icon-search.png") no-repeat center center;
+        background-size: 0.42667rem;
+        border-right: 1px solid #efeff0; }
+      .wrap header .search-wrap .ipt {
+        flex: 1;
+        padding: 0 0.26667rem; }
+      .wrap header .search-wrap .search-btn {
+        width: 1.17333rem;
+        height: 0.90667rem;
+        text-align: center;
+        line-height: 0.90667rem;
+        border-left: 1px solid #efeff0; }
+  .wrap .content {
+    width: 100%;
+    flex: 1;
+    overflow-y: hidden; }
+  .wrap .block {
+    width: 100%;
+    border-bottom: 0.26667rem solid #ddd; }
+    .wrap .block .title-line {
+      line-height: 1.17333rem;
+      border-left: 0.10667rem solid #ff6600;
+      padding-left: 0.4rem;
+      border-bottom: 1px solid #ddd; }
+
+.none {
+  display: none; }
+
+.artical-con {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 0.26667rem;
+  box-sizing: border-box;
+  overflow-y: scroll; }
+  .artical-con h2 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #736357;
+    line-height: 1.5;
+    border-bottom: 1px solid #736357; }
+  .artical-con p {
+    font-size: 0.42667rem;
+    color: #4e534f;
+    line-height: 1.5;
+    margin-top: 0.26667rem;
+    text-indent: 2em; }
+
+.set-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .set-wrap > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+  .set-wrap .set-t {
+    width: 100%;
+    height: 1.17333rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    line-height: 1.17333rem;
+    color: #fff;
+    font-size: 0.37333rem;
+    display: flex; }
+    .set-wrap .set-t .icon-circle-back {
+      width: 1.17333rem;
+      height: 1.17333rem;
+      background: url("../imgs/icon-circle-back.png") no-repeat center center;
+      background-size: 0.53333rem; }
+  .set-wrap .mask {
+    width: 100%;
+    flex: 1; }
+  .set-wrap .set-b {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.37333rem; }
+    .set-wrap .set-b .set-chapter {
+      width: 100%;
+      padding: 0.4rem;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #fff; }
+    .set-wrap .set-b .set-styles {
+      width: 100%;
+      display: flex;
+      padding-bottom: 0.26667rem; }
+      .set-wrap .set-b .set-styles dl {
+        flex: 1; }
+        .set-wrap .set-b .set-styles dl dt {
+          width: 1.17333rem;
+          height: 1.17333rem;
+          background: url("../imgs/icon-circle-back.png") no-repeat center center;
+          background-size: 0.53333rem;
+          margin: 0 auto; }
+        .set-wrap .set-b .set-styles dl dd {
+          text-align: center;
+          line-height: 1.5; }
+        .set-wrap .set-b .set-styles dl.chapter-btn dt {
+          background: url("../imgs/icon-chapter.png") no-repeat center center;
+          background-size: 0.53333rem; }
+        .set-wrap .set-b .set-styles dl.font-btn dt {
+          background: url("../imgs/icon-font.png") no-repeat center center;
+          background-size: 0.53333rem; }
+        .set-wrap .set-b .set-styles dl.font-btn.active dt {
+          background: url("../imgs/icon-font-active.png") no-repeat center center;
+          background-size: 0.53333rem; }
+        .set-wrap .set-b .set-styles dl.day-btn dt {
+          background: url("../imgs/icon-night.png") no-repeat center center;
+          background-size: 0.53333rem; }
+        .set-wrap .set-b .set-styles dl.day-btn.light dt {
+          background: url("../imgs/icon-light.png") no-repeat center center;
+          background-size: 0.53333rem; }
+        .set-wrap .set-b .set-styles dl.download-btn dt {
+          background: url("../imgs/icon-down.png") no-repeat center center;
+          background-size: 0.53333rem; }
+    .set-wrap .set-b .set-panel {
+      width: 100%;
+      padding: 0.26667rem;
+      box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      bottom: 2rem;
+      left: 0; }
+      .set-wrap .set-b .set-panel > div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 0.53333rem; }
+        .set-wrap .set-b .set-panel > div span {
+          font-size: 0.37333rem;
+          margin: 0 0.53333rem 0 0.26667rem; }
+        .set-wrap .set-b .set-panel > div button {
+          border: 1px solid #fff;
+          border-radius: 0.4rem;
+          font-size: 0.37333rem;
+          padding: 0.10667rem 1.06667rem;
+          background-color: transparent;
+          color: #fff;
+          margin-right: 0.26667rem;
+          outline: none; }
+        .set-wrap .set-b .set-panel > div .bg-btns li {
+          display: inline-block;
+          width: 0.8rem;
+          height: 0.8rem;
+          border-radius: 50%;
+          background-color: #f7eee5;
+          margin-right: 0.26667rem;
+          position: relative; }
+          .set-wrap .set-b .set-panel > div .bg-btns li:nth-child(2) {
+            background-color: #e9dfc7; }
+          .set-wrap .set-b .set-panel > div .bg-btns li:nth-child(3) {
+            background-color: #a4a4a4; }
+          .set-wrap .set-b .set-panel > div .bg-btns li:nth-child(4) {
+            background-color: #cdefce; }
+          .set-wrap .set-b .set-panel > div .bg-btns li:nth-child(5) {
+            background-color: #283548; }
+          .set-wrap .set-b .set-panel > div .bg-btns li:nth-child(6) {
+            background-color: #0f1410; }
+          .set-wrap .set-b .set-panel > div .bg-btns li.active:before {
+            content: '';
+            width: 0.90667rem;
+            height: 0.90667rem;
+            border: 1px solid red;
+            border-radius: 50%;
+            position: absolute;
+            left: -0.06667rem;
+            top: -0.06667rem; }

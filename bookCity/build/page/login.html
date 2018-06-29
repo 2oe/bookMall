@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="form">
+            <input type="text" placeholder="输入用户名" id="username">
+            <input type="password" placeholder="输入密码" id="pwd">
+            <button id="sub-btn">登录</button>
+        </div>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['login'])
+        })
+    </script>
+</body>
+
+</html>

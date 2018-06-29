@@ -1,0 +1,191 @@
+@import './tpl/common.scss';
+.artical-con {
+    width: 100%;
+    height: 100%;
+    background-color: $write-color;
+    padding: pxTorem(10px);
+    box-sizing: border-box;
+    overflow-y: scroll;
+    h2 {
+        font-size: pxTorem(30px);
+        font-weight: bold;
+        color: $title-color;
+        line-height: 1.5;
+        border-bottom: 1px solid $title-color;
+    }
+    p {
+        font-size: pxTorem(16px);
+        color: $artical-color;
+        line-height: 1.5;
+        margin-top: pxTorem(10px);
+        text-indent: 2em;
+    }
+}
+
+.set-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &>div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .set-t {
+        width: 100%;
+        height: pxTorem(44px);
+        background-color: rgba(0, 0, 0, .8);
+        line-height: pxTorem(44px);
+        color: $write-color;
+        font-size: pxTorem(14px);
+        display: flex;
+        .icon-circle-back {
+            width: pxTorem(44px);
+            height: pxTorem(44px);
+            @include bg("../imgs/icon-circle-back.png");
+            background-size: pxTorem(20px);
+        }
+    }
+    .mask {
+        width: 100%;
+        flex: 1;
+    }
+    .set-b {
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        color: $write-color;
+        font-size: pxTorem(14px);
+        .set-chapter {
+            width: 100%;
+            padding: pxTorem(15px);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $write-color;
+        }
+        .set-styles {
+            width: 100%;
+            display: flex;
+            padding-bottom: pxTorem(10px);
+            dl {
+                flex: 1;
+                dt {
+                    width: pxTorem(44px);
+                    height: pxTorem(44px);
+                    @include bg("../imgs/icon-circle-back.png");
+                    background-size: pxTorem(20px);
+                    margin: 0 auto;
+                }
+                dd {
+                    text-align: center;
+                    line-height: 1.5;
+                }
+                &.chapter-btn {
+                    dt {
+                        @include bg("../imgs/icon-chapter.png");
+                        background-size: pxTorem(20px);
+                    }
+                }
+                &.font-btn {
+                    dt {
+                        @include bg("../imgs/icon-font.png");
+                        background-size: pxTorem(20px);
+                    }
+                    &.active {
+                        dt {
+                            @include bg("../imgs/icon-font-active.png");
+                            background-size: pxTorem(20px);
+                        }
+                    }
+                }
+                &.day-btn {
+                    dt {
+                        @include bg("../imgs/icon-night.png");
+                        background-size: pxTorem(20px);
+                    }
+                    &.light {
+                        dt {
+                            @include bg("../imgs/icon-light.png");
+                            background-size: pxTorem(20px);
+                        }
+                    }
+                }
+                &.download-btn {
+                    dt {
+                        @include bg("../imgs/icon-down.png");
+                        background-size: pxTorem(20px);
+                    }
+                }
+            }
+        }
+        .set-panel {
+            width: 100%;
+            padding: pxTorem(10px);
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, .8);
+            position: absolute;
+            bottom: pxTorem(75px);
+            left: 0;
+            &>div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-top: pxTorem(20px);
+                span {
+                    font-size: pxTorem(14px);
+                    margin: 0 pxTorem(20px) 0 pxTorem(10px);
+                }
+                button {
+                    border: 1px solid $write-color;
+                    border-radius: pxTorem(15px);
+                    font-size: pxTorem(14px);
+                    padding: pxTorem(4px) pxTorem(40px);
+                    background-color: transparent;
+                    color: $write-color;
+                    margin-right: pxTorem(10px);
+                    outline: none;
+                }
+                .bg-btns {
+                    li {
+                        display: inline-block;
+                        width: pxTorem(30px);
+                        height: pxTorem(30px);
+                        border-radius: 50%;
+                        background-color: $article-bg1;
+                        margin-right: pxTorem(10px);
+                        position: relative;
+                        &:nth-child(2) {
+                            background-color: $article-bg2;
+                        }
+                        &:nth-child(3) {
+                            background-color: $article-bg3;
+                        }
+                        &:nth-child(4) {
+                            background-color: $article-bg4;
+                        }
+                        &:nth-child(5) {
+                            background-color: $article-bg5;
+                        }
+                        &:nth-child(6) {
+                            background-color: $article-bg6;
+                        }
+                        &.active:before {
+                            content: '';
+                            width: pxTorem(34px);
+                            height: pxTorem(34px);
+                            border: 1px solid red;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: pxTorem(-2.5px);
+                            top: pxTorem(-2.5px);
+                            ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

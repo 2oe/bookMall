@@ -1,0 +1,17 @@
+@import './tpl/common.scss';
+.chapter-wrap {
+    flex: 1;
+    overflow: hidden;
+    .chapter-list {
+        width: 100%;
+        li {
+            line-height: pxTorem(44px);
+            border-bottom: 1px solid $border-color;
+            padding: 0 pxTorem(15px);
+            color: $gray-color;
+            &.active {
+                color: $btn-orange-bg;
+            }
+        }
+    }
+}

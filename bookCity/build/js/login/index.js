@@ -1,0 +1,1 @@
+require(["jquery","storage"],function(a,n){a("#sub-btn").on("click",function(){var e=a("#username").val(),o=a("#pwd").val();e?o?a.ajax({url:"/api/login",type:"post",dataType:"json",data:{username:e,pwd:o},success:function(e){console.log(e),e.code&&(n.set("code",e.code),history.go(-1)),alert(e.msg)},error:function(e){console.warn(e)}}):alert("请输入密码"):alert("请输入用户名")})});

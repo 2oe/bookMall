@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="../css/artical.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 内容 -->
+        <div class="artical-con"></div>
+        <script type="text/x-handlebars-template" id="artical-tpl">
+            <h2>{{t}}</h2>
+            {{#each p}}
+            <p>{{this}}</p>
+            {{/each}}
+        </script>
+        <!-- 设置面板 -->
+        <div class="set-wrap none">
+            <div>
+                <div class="set-t">
+                    <span class="icon-circle-back"></span>
+                    <span>返回</span>
+                </div>
+                <div class="mask"></div>
+                <div class="set-b">
+                    <div class="set-chapter">
+                        <span id="pre-btn">上一章</span>
+                        <div class="chapter-num">
+                            <span class="cur-chapter"></span>/
+                            <span class="total-chapter"></span>
+                        </div>
+                        <span id="next-btn">下一章</span>
+                    </div>
+                    <div class="set-styles ">
+                        <dl class="chapter-btn">
+                            <dt></dt>
+                            <dd>目录</dd>
+                        </dl>
+                        <dl class="font-btn">
+                            <dt></dt>
+                            <dd>字体</dd>
+                        </dl>
+                        <dl class="day-btn">
+                            <dt></dt>
+                            <dd>夜间</dd>
+                        </dl>
+                        <dl class="download-btn">
+                            <dt></dt>
+                            <dd>下载</dd>
+                        </dl>
+                    </div>
+                    <div class="set-panel none">
+                        <div>
+                            <span>字号</span>
+                            <div>
+                                <button class="large-btn">大</button>
+                                <button class="small-btn">小</button>
+                            </div>
+                        </div>
+                        <div>
+                            <span>背景</span>
+                            <ul class="bg-btns">
+                                <li data-bg="#f7eee5" class="active"></li>
+                                <li data-bg="#e9dfc7"></li>
+                                <li data-bg="#a4a4a4"></li>
+                                <li data-bg="#cdefce"></li>
+                                <li data-bg="#283548"></li>
+                                <li data-bg="#0f1410"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['artical'])
+        })
+    </script>
+
+    <!-- 
+
+        duokan_("slkdjsdkjsdklsdjlksdjklsd")
+     -->
+    <!-- <script>
+         function duokan_fiction_chapter(data){
+            console.log(data)
+         }
+     </script> -->
+</body>
+
+</html>
